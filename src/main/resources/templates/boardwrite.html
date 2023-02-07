@@ -7,30 +7,28 @@
 
 <style>
     .layout {
-        width : 500px;
-        margin : 0 auto;
-        margin-top: 40px;
-    }
-    .layout  input {
-        width: 100%;
-        box-sizing: border-box;
+        width: 500px;
+        margin: 0 auto;
     }
 
-    .layout  textarea {
+    .layout  input, textarea {
         width: 100%;
+        box-sizing: border-box;
         margin-top: 10px;
-        min-height: 300px;
     }
 
 </style>
 
 <body>
-  <div class="layout">
-      <form action="/board/writepro" method="post">
+
+<div class="layout">
+    <form action="/board/writepro" method="post">
         <input name="title" type="text">
         <textarea name="content"></textarea>
         <button type="submit">작성</button>
-      </form>
-  </div>
+    </form>
+
+</div>
+
 </body>
 </html>
