@@ -7,11 +7,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BoardService {
-
-//    = new boardRepository 생략
     @Autowired
     private BoardRepository boardRepository;
-    public void write(Board board) {
+    public void write(Board board){
 
         boardRepository.save(board);
     }
