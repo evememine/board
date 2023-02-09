@@ -11,7 +11,9 @@ import java.util.List;
 public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
+
 //    글 작성
+
     public void write(Board board){
 
         boardRepository.save(board);

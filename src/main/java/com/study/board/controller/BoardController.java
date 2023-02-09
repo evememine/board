@@ -25,6 +25,7 @@ public class BoardController {
         return "";
     }
 
+
     @GetMapping("/board/list")
     public String boardList(Model model){
 
@@ -38,4 +39,3 @@ public class BoardController {
         model.addAttribute("board",boardService.boardView(id));
         return "boardview";
     }
-}
