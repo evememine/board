@@ -34,10 +34,16 @@
             </tbody>
         </table>
         <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">
-            <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page -1})}" th:text="${page}"></a>
+            <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page -1}, searchKeyword=${param.searchKeyword})}" th:text="${page}"></a>
+<!--            searchKeword 부분을 추가해야 다른 페이지가 넘어간다
+                param으로 페이지가 넘어갈 때도 키워드를 유지할 수 있음 -->
             <strong th:if="${page == nowPage}" th:text="${page}" style="color : red"></strong>
 <!--            <strong th:if="${page != nowPage}" th:href="@{/board/list(page = ${page -1})}"></strong>-->
         </th:block>
+        <form th:action="@{/board/list}" method="get">
+            <input type="text" name="searchKeyword">
+            <button type="submit">검색</button>
+        </form>
     </div>
 
 </body>
